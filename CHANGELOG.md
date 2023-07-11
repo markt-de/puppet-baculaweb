@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 * Update PDK from 2.6.0 to 3.0.0
 
+### Fixed
+* Fix Github Actions Pipeline
+
 ## [v1.0.0](https://github.com/andeman/puppet-baculaweb/tree/v1.0.0) (2023-01-20)
 
 [Full Changelog](https://github.com/andeman/puppet-baculaweb/compare/v0.1.0...v1.0.0)

@@ -12,7 +12,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        puppet_version: [6,7]
+        puppet_version: [7]
 
     name: Check / Puppet ${{ matrix.puppet_version }}
     runs-on: ubuntu-20.04
@@ -60,8 +60,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: ['deb10', 'deb11', 'el7', 'el8', 'rocky8', 'ub2004']
-        puppet_version: [6,7]
+        os: ['deb10', 'deb11', 'el8', 'rocky8', 'ub2004']
+        puppet_version: [7]
 
     name: Acceptance / ${{ matrix.os }} / Puppet ${{ matrix.puppet_version }}
     runs-on: ubuntu-20.04
