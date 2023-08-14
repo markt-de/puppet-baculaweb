@@ -1,9 +1,9 @@
-[![Continous Integration](https://github.com/andeman/puppet-baculaweb/actions/workflows/ci.yaml/badge.svg)](https://github.com/andeman/puppet-baculaweb/actions/workflows/ci.yaml)
-[![codecov](https://codecov.io/gh/andeman/puppet-baculaweb/branch/main/graph/badge.svg?token=0BoY091pEV)](https://codecov.io/gh/andeman/puppet-baculaweb)
-[![Puppet Forge](https://img.shields.io/puppetforge/v/andeman/baculaweb.svg)](https://forge.puppetlabs.com/andeman/baculaweb)
-[![Puppet Forge Downloads](http://img.shields.io/puppetforge/dt/andeman/baculaweb.svg)](https://forge.puppetlabs.com/andeman/baculaweb)
+[![Continous Integration](https://github.com/markt-de/puppet-baculaweb/actions/workflows/ci.yaml/badge.svg)](https://github.com/markt-de/puppet-baculaweb/actions/workflows/ci.yaml)
+[![codecov](https://codecov.io/gh/markt-de/puppet-baculaweb/branch/main/graph/badge.svg?token=0BoY091pEV)](https://codecov.io/gh/markt-de/puppet-baculaweb)
+[![Puppet Forge](https://img.shields.io/puppetforge/v/markt/baculaweb.svg)](https://forge.puppetlabs.com/mark/baculaweb)
+[![Puppet Forge Downloads](http://img.shields.io/puppetforge/dt/markt/baculaweb.svg)](https://forge.puppetlabs.com/markt/baculaweb)
 
-# baculaweb
+# puppet-baculaweb
 
 #### Table of Contents
 
@@ -32,32 +32,15 @@
   * [Contributing](#contributing)
   * [Release Notes](#release-notes)
 
-
-
 ## Overview
 
-This module install and configures the baculaweb a web based reporting and monitoring tool for Bacula.
-
-You can find the baculaweb documention here: https://www.bacula-web.org/
-
-The module only install and configure the webapp itself. You still require a webserver (nginx or apache) with php.
+This module install and configures [Bacula-Web](https://www.bacula-web.org/), a web based reporting and monitoring tool for Bacula.
 
 ## Requirements
 
-* Puppet >= 6.0.0
 * Bacula-Web 8.6.0 or later (due to breaking changes in this release)
-* [puppetlabs/stdlib](https://github.com/puppetlabs/puppetlabs-stdlib)
-* [puppet/archive](https://github.com/voxpupuli/puppet-archive)
-
-### Optional Setup Requirements
-
-Recommended modules for apache + php setup:
-* [puppetlabs/apache](https://github.com/puppetlabs/puppetlabs-apache)
-* [puppet/php](https://github.com/voxpupuli/puppet-php)
-
-The needed requirements for the webserver and for php are documented here:
-
-http://docs.bacula-web.org/en/latest/02_install/requirements.html
+* A webservice like Apache or Nginx, [puppetlabs/apache](https://github.com/puppetlabs/puppetlabs-apache) is recommended.
+* A supported version of PHP (PHP-FPM is strongly recommended), [puppet/php](https://github.com/voxpupuli/puppet-php) is recommended.
 
 ### Beginning with baculaweb
 All parameters for the baculaweb module are contained within the main baculaweb class, so for any function of the module, set the options you want. All configuration parameters can be assigned hiera. The default values are also lookuped up by hiera. See the common usages below for examples.
@@ -65,11 +48,13 @@ All parameters for the baculaweb module are contained within the main baculaweb 
 ## Usage
 
 ### Install and enable baculaweb
+
 ```
 include baculaweb
 ```
 
 ### Default User and Password for fresh installs
+
 After installation the default user is **admin** and the default password is **password**. You should change this after installation.
 
 See: https://docs.bacula-web.org/en/latest/02_install/finalize.html#reset-user-password
@@ -79,6 +64,7 @@ The default application.db is only deployed once. Data is persisted between upgr
 
 
 ### Configure bacula catalog databases
+
 To get baculaweb up and running configure at least one bacula catalog database with the paramter catalog_db.
 
 See the following example for the different catalog database types:
@@ -222,6 +208,7 @@ For a list of supported operating systems, see [metadata.json](metadata.json)
 This module uses [puppet_litmus](https://github.com/puppetlabs/puppet_litmus) for running acceptance tests.
 
 ### Running acceptance tests
+
 Create test environment:
 ```
 ./scripts/create_test_env
@@ -243,12 +230,15 @@ Remove the test environment:
 ```
 
 ### Running unit tests
+
 ```
 ./scripts/unit_tests
 ```
+
 ## Release module to Puppet Forge
 
 ### Prepare
+
 First prepare the release with:
 
 ```
@@ -258,26 +248,25 @@ First prepare the release with:
 This will set the version in `metadata.json`, create `REFERENCE.md` and  `CHANGELOG.md`.
 
 ### Commit and push
+
 Then commit the changes and push them to the repository.
 
 ### configure github actions secrets
-https://github.com/andeman/puppet-opnsense/settings/secrets/actions
+
+https://github.com/markt-de/puppet-opnsense/settings/secrets/actions
 
 Ensure that the following secrets are set in the github repository:
 - FORGE_API_KEY (your puppet forge api key)
 
 
 ### Run github actions release workflow
+
 Then run github actions pipeline "Publish module to puppet forge" from main branch to release the module to the forge:
 
-https://github.com/andeman/puppet-baculaweb/actions/workflows/release.yaml
+https://github.com/markt-de/puppet-baculaweb/actions/workflows/release.yaml
 
 ## Contributing
 
 Please use the GitHub issues functionality to report any bugs or requests for new features. Feel free to fork and submit pull requests for potential contributions.
 
 All contributions must pass all existing tests, new features should provide additional unit/acceptance tests.
-
-## Release Notes
-
-See [CHANGELOG.md](CHANGELOG.md)

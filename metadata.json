@@ -1,12 +1,12 @@
 {
-  "name": "andeman-baculaweb",
+  "name": "markt-baculaweb",
   "version": "1.0.0",
-  "author": "andeman",
-  "summary": "Puppet module for baculaweb - a web based reporting and monitoring tool for Bacula",
+  "author": "markt.de",
+  "summary": "Setup Bacula-Web - a web based reporting and monitoring tool for Bacula",
   "license": "Apache-2.0",
-  "source": "https://github.com/andeman/puppet-baculaweb",
-  "project_page": "https://github.com/andeman/puppet-baculaweb",
-  "issues_url": "https://github.com/andeman/puppet-baculaweb/issues",
+  "source": "https://github.com/markt-de/puppet-baculaweb",
+  "project_page": "https://github.com/markt-de/puppet-baculaweb",
+  "issues_url": "https://github.com/markt-de/puppet-baculaweb/issues",
   "dependencies": [
     {
       "name": "puppetlabs/stdlib",
