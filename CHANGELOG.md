@@ -1,9 +1,11 @@
-# Change log
+# Changelog
+
 All notable changes to this project will be documented in this file.
+
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [v1.1.0] - 2023-08-14
 
 ### Changed
 * Update module dependencies, OS support and Puppet version
@@ -13,36 +15,23 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 * Fix compatibility with puppetlabs/stdlib v9.0.0
 * Fix Github Actions Pipeline
 
-## [v1.0.0](https://github.com/andeman/puppet-baculaweb/tree/v1.0.0) (2023-01-20)
-
-[Full Changelog](https://github.com/andeman/puppet-baculaweb/compare/v0.1.0...v1.0.0)
+## [v1.0.0] - 2023-01-20
 
 ### Changed
-
-- Update OS support, dependencies and documentation [\#6](https://github.com/andeman/puppet-baculaweb/pull/6) ([fraenki](https://github.com/fraenki))
+* Update OS support, dependencies and documentation
 
 ### Added
-
-- Persists User Database after upgrade [\#8](https://github.com/andeman/puppet-baculaweb/pull/8) ([andeman](https://github.com/andeman))
+* Persists User Database after upgrade
 
 ### Fixed
+* Fix tests for GitHub actions
 
-- Fix tests for GitHub actions [\#9](https://github.com/andeman/puppet-baculaweb/pull/9) ([andeman](https://github.com/andeman))
-- just ignore it [\#5](https://github.com/andeman/puppet-baculaweb/pull/5) ([andeman](https://github.com/andeman))
-- update README.md [\#4](https://github.com/andeman/puppet-baculaweb/pull/4) ([andeman](https://github.com/andeman))
-- add documentation [\#3](https://github.com/andeman/puppet-baculaweb/pull/3) ([andeman](https://github.com/andeman))
+## [v0.1.0] - 2020-01-15
 
-## [v0.1.0](https://github.com/andeman/puppet-baculaweb/tree/v0.1.0) (2020-01-15)
-
-[Full Changelog](https://github.com/andeman/puppet-baculaweb/compare/86f97e742734dc7ad4dfa5c45d2ecb6f8722771b...v0.1.0)
-
-### Added
-
-- Version 0.1.0 [\#2](https://github.com/andeman/puppet-baculaweb/pull/2) ([andeman](https://github.com/andeman))
-- Release 0.0.9 [\#1](https://github.com/andeman/puppet-baculaweb/pull/1) ([andeman](https://github.com/andeman))
-
+initial release
 
 ### Summary
 
-[Unreleased]: https://github.com/andeman/puppet-baculaweb/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/andeman/puppet-baculaweb/compare/v1.1.0...HEAD
+[v1.1.0]: https://github.com/andeman/puppet-baculaweb/compare/v1.0.0...v1.1.0
 [v1.0.0]: https://github.com/andeman/puppet-baculaweb/compare/v0.1.0...v1.0.0

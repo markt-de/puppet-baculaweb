@@ -1,6 +1,6 @@
 {
   "name": "markt-baculaweb",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "markt.de",
   "summary": "Setup Bacula-Web - a web based reporting and monitoring tool for Bacula",
   "license": "Apache-2.0",
