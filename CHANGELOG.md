@@ -32,6 +32,6 @@ initial release
 
 ### Summary
 
-[Unreleased]: https://github.com/andeman/puppet-baculaweb/compare/v1.1.0...HEAD
-[v1.1.0]: https://github.com/andeman/puppet-baculaweb/compare/v1.0.0...v1.1.0
-[v1.0.0]: https://github.com/andeman/puppet-baculaweb/compare/v0.1.0...v1.0.0
+[Unreleased]: https://github.com/markt-de/puppet-baculaweb/compare/v1.1.0...HEAD
+[v1.1.0]: https://github.com/markt-de/puppet-baculaweb/compare/v1.0.0...v1.1.0
+[v1.0.0]: https://github.com/markt-de/puppet-baculaweb/compare/v0.1.0...v1.0.0

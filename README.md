@@ -1,5 +1,4 @@
 [![Continous Integration](https://github.com/markt-de/puppet-baculaweb/actions/workflows/ci.yaml/badge.svg)](https://github.com/markt-de/puppet-baculaweb/actions/workflows/ci.yaml)
-[![codecov](https://codecov.io/gh/markt-de/puppet-baculaweb/branch/main/graph/badge.svg?token=0BoY091pEV)](https://codecov.io/gh/markt-de/puppet-baculaweb)
 [![Puppet Forge](https://img.shields.io/puppetforge/v/markt/baculaweb.svg)](https://forge.puppetlabs.com/mark/baculaweb)
 [![Puppet Forge Downloads](http://img.shields.io/puppetforge/dt/markt/baculaweb.svg)](https://forge.puppetlabs.com/markt/baculaweb)
 
