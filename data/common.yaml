@@ -1,20 +1,20 @@
 ---
-baculaweb::version: '8.6.3'
-baculaweb::extract_base_dir: '/opt/bacula-web'
-baculaweb::data_dir: '/opt/bacula-web/data'
-baculaweb::data_dir_symlink: true
 baculaweb::archive_symlink_to_root_dir: true
 baculaweb::catalog_db:
   - label: '%{::fqdn}'
     db_name: '/path/to/database'
     db_type: 'sqlite'
+baculaweb::data_dir: '/opt/bacula-web/data'
+baculaweb::data_dir_symlink: true
 baculaweb::datetime_format: 'Y-m-d H:i:s'
 baculaweb::debug: false
 baculaweb::enable_users_auth: true
+baculaweb::extract_base_dir: '/opt/bacula-web'
+baculaweb::group: 'apache'
 baculaweb::hide_empty_pools: true
 baculaweb::language: 'en_US'
 baculaweb::mirror_base_url: "https://github.com/bacula-web/bacula-web/releases/download"
 baculaweb::root_dir: '/var/www/html/bacula-web'
 baculaweb::show_inactive_clients: true
 baculaweb::user: 'apache'
-baculaweb::group: 'apache'
+baculaweb::version: '8.6.3'
