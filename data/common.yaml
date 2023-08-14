@@ -1,7 +1,7 @@
 ---
 baculaweb::archive_symlink_to_root_dir: true
 baculaweb::catalog_db:
-  - label: '%{::fqdn}'
+  - label: '%{facts.networking.fqdn}'
     db_name: '/path/to/database'
     db_type: 'sqlite'
 baculaweb::data_dir: '/opt/bacula-web/data'
