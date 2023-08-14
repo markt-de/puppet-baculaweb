@@ -1,5 +1,4 @@
-# @summary
-#   Download the baculaweb source and install it in the root_dir
+# @summary Download the baculaweb source and install it in the root_dir
 #
 # @api private
 #

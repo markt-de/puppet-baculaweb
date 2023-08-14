@@ -1,6 +1,4 @@
-# == Class: baculaweb
-#
-# @summary Installs bacula-web - A web based reporting and monitoring tool for Bacula.
+# @summary Installs Bacula-Web - A web based reporting and monitoring tool for Bacula.
 #
 # @see https://www.bacula-web.org/
 #

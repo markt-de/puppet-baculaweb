@@ -1,5 +1,4 @@
-# @summary
-#   Configure the bacula-web application and set proper permissions
+# @summary Configure the bacula-web application and set proper permissions
 #
 # @api private
 #
