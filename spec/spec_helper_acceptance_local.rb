@@ -126,7 +126,7 @@ def setup_webserver
     }
 
     apache::vhost { 'bacula_web':
-      servername     => $::fqdn,
+      servername     => $fqdn,
       port           => 80,
       docroot        => '/var/www/html/bacula-web/public',
       manage_docroot => false,
