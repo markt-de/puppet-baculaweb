@@ -23,7 +23,7 @@ def setup_webserver
     posix   => {},
   MANIFEST
 
-  if %r{debian|ubuntu}.match?(os[:family])
+  if os[:family].eql?('debian')
     php_extensions = <<-MANIFEST
       gd      => {},
       json    => {},
@@ -35,7 +35,18 @@ def setup_webserver
     MANIFEST
   end
 
-  if os[:family] == 'redhat' && os[:release].to_i == 7
+  if os[:family].eql?('ubuntu')
+    php_extensions = <<-MANIFEST
+      gd      => {},
+      pdo     => {},
+      pgsql   => {},
+      mysqlnd => {},
+      posix   => {},
+      sqlite3 => {},
+    MANIFEST
+  end
+
+  if os[:family].eql?('redhat') && os[:release].to_i == 7
     pp_repo = <<-MANIFEST
       yumrepo { 'epel':
         descr    => 'Extra Packages for Enterprise Linux $releasever - $basearch',
@@ -69,7 +80,7 @@ def setup_webserver
 
   end
 
-  if os[:family] == 'redhat' && os[:release].to_i == 8
+  if os[:family].eql?('redhat') && os[:release].to_i == 8
     pp_repo = <<-MANIFEST
       yumrepo { 'epel':
         descr     => 'Extra Packages for Enterprise Linux $releasever - $basearch',
