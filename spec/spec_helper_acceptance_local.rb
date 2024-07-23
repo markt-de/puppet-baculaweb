@@ -24,15 +24,26 @@ def setup_webserver
   MANIFEST
 
   if os[:family].eql?('debian')
-    php_extensions = <<-MANIFEST
-      gd      => {},
-      json    => {},
-      pdo     => {},
-      pgsql   => {},
-      mysqlnd => {},
-      posix   => {},
-      sqlite3 => {},
-    MANIFEST
+    php_extensions = if os[:release].to_i >= 12
+                       <<-MANIFEST
+                         gd      => {},
+                         pdo     => {},
+                         pgsql   => {},
+                         mysqlnd => {},
+                         posix   => {},
+                         sqlite3 => {},
+                       MANIFEST
+                     else
+                       <<-MANIFEST
+                         gd      => {},
+                         json    => {},
+                         pdo     => {},
+                         pgsql   => {},
+                         mysqlnd => {},
+                         posix   => {},
+                         sqlite3 => {},
+                       MANIFEST
+                     end
   end
 
   if os[:family].eql?('ubuntu')
@@ -137,7 +148,7 @@ def setup_webserver
     }
 
     apache::vhost { 'bacula_web':
-      servername     => $fqdn,
+      servername     => $facts['networking']['fqdn'],
       port           => 80,
       docroot        => '/var/www/html/bacula-web/public',
       manage_docroot => false,
