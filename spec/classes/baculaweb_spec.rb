@@ -16,7 +16,7 @@ describe 'baculaweb' do
         it {
           File.write(
             'catalog.json',
-            PSON.pretty_generate(catalogue),
+            JSON.pretty_generate(catalogue),
           )
           is_expected.to compile.with_all_deps
         }
